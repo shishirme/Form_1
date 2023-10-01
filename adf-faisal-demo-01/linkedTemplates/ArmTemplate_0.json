@@ -59,6 +59,37 @@
 							"method": "GET",
 							"headers": {}
 						}
+					},
+					{
+						"name": "SaveOutputinBlob",
+						"type": "WebActivity",
+						"dependsOn": [
+							{
+								"activity": "ReadRestAPI",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"url": "https://faisaldatalakegen2.blob.core.windows.net/green?sp=racw&st=2023-10-01T01:56:55Z&se=2023-10-01T09:56:55Z&spr=https&sv=2022-11-02&sr=c&sig=BY809%2BHGMDshMLLPcyg55184QTEOe1R6i2%2F8U316D14%3D",
+							"method": "POST",
+							"headers": {
+								"x-ms-blob-type": "BlockBlob"
+							},
+							"body": {
+								"value": "@activity('ReadRestAPI').output",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"policy": {
