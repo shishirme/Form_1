@@ -1,0 +1,9 @@
+{
+	"name": "adf-faisal-demo-01",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "27741bf6-d59b-44c3-8142-555cdfded47a",
+		"tenantId": "3388d9a7-fa14-438b-ab79-b07c26c69136"
+	}
+}
