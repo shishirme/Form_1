@@ -20,7 +20,7 @@
 				}
 			},
 			{
-				"name": "SaveOutputinBlob",
+				"name": "SaveOutputinblob",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
@@ -39,15 +39,12 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"url": "https://faisaldatalakegen2.blob.core.windows.net/green?sp=racw&st=2023-10-01T01:56:55Z&se=2023-10-02T09:56:55Z&spr=https&sv=2022-11-02&sr=c&sig=6xKUe4elEbNXm25uQr4lII2SDM1O5P7izxV0sM9Otww%3D",
-					"method": "POST",
+					"url": "https://faisaldatalakegen2.blob.core.windows.net/green/webactivityop.json?sp=racw&st=2023-10-01T01:56:55Z&se=2023-10-02T09:56:55Z&spr=https&sv=2022-11-02&sr=c&sig=6xKUe4elEbNXm25uQr4lII2SDM1O5P7izxV0sM9Otww%3D",
+					"method": "PUT",
 					"headers": {
 						"x-ms-blob-type": "BlockBlob"
 					},
-					"body": {
-						"value": "@activity('ReadRestAPI').output",
-						"type": "Expression"
-					}
+					"body": "@activity('ReadRestAPI').output"
 				}
 			}
 		],
