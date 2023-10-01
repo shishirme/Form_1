@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://apinsw.onegov.nsw.gov.au/api/swagger",
+			"url": "https://api.onegov.nsw.gov.au/ ",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
